@@ -21,7 +21,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Make gradlew executable
-        run: chmod +x ./7M_CameraSave_Fixed/gradlew
+        run: chmod +x 7M_CameraSave_Fixed/gradlew
 
       - name: Build debug APK
         run: |
