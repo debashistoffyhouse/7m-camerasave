@@ -21,12 +21,10 @@ jobs:
           distribution: 'temurin'
 
       - name: Make gradlew executable
-        run: chmod +x app/gradlew
+        run: chmod +x ./gradlew  # ✅ FIXED path
 
       - name: Build debug APK
-        run: |
-          cd app
-          ./gradlew assembleDebug
+        run: ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
