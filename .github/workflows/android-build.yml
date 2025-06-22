@@ -1,3 +1,4 @@
+
 name: Build Android APK
 
 on:
@@ -20,9 +21,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
-
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
@@ -32,5 +30,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: 7M-CameraSave-APK
+          name: app-debug.apk
           path: app/build/outputs/apk/debug/app-debug.apk
