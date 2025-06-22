@@ -21,15 +21,15 @@ jobs:
           distribution: 'temurin'
 
       - name: Make gradlew executable
-        run: chmod +x 7M_CameraSave_Fixed/gradlew
+        run: chmod +x app/gradlew
 
       - name: Build debug APK
         run: |
-          cd 7M_CameraSave_Fixed
+          cd app
           ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug.apk
-          path: 7M_CameraSave_Fixed/app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
